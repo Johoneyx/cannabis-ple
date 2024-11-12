@@ -1,0 +1,482 @@
+---
+title: "Cleaning_CANTRIPS_03.01.2024"
+author: "Johanna M Groening"
+date: "2024-01-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#load libraries
+
+library(psych)
+library(plyr)
+library(tidyverse)
+library(dplyr)
+```
+
+
+```{r}
+readinallversions <- function(pattern, dataframe_name) {
+  # Get the list of files based on the provided pattern
+  file_list <- list.files(pattern = pattern, full.names = TRUE)
+  
+  # Read in each CSV file into a separate dataframe
+  dataframes_list <- lapply(file_list, function(file) {
+    # Extract the source file name without extension
+    source_file <- tools::file_path_sans_ext(basename(file))
+    
+    # Read the CSV file with semicolon separator
+    data <- read.csv2(file, header = TRUE, stringsAsFactors = FALSE) %>%
+      mutate_all(as.character)
+    
+    # Return the dataframe with an additional column for source file
+    data$sourcefile <- source_file
+    return(data)
+  })
+  
+  # Combine the data frames using bind_rows
+  combined_data <- dplyr::bind_rows(dataframes_list, .id = "sourcefile")
+  
+  # Filter out rows where Event.Index is "END OF FILE"
+  combined_data_filtered <- combined_data %>%
+    dplyr::filter(Event.Index != "END OF FILE")
+  
+  # Assign the combined and filtered dataframe to the specified name
+  assign(dataframe_name, combined_data_filtered, envir = .GlobalEnv)
+  
+  # Return the combined and filtered dataframe
+  return(combined_data_filtered)
+}
+
+# Example usage:
+# readinallversions("-vlry.csv", "my_combined_dataframe")
+# The resulting dataframe will be available as "my_combined_dataframe" in the global environment.
+
+```
+
+```{r}
+read_join_versions <- function(pattern, dataframe_name) {
+  # Get the list of files based on the provided pattern
+  file_list <- list.files(pattern = pattern, full.names = TRUE)
+  
+  # Read in each CSV file into a separate dataframe
+  dataframes_list <- lapply(file_list, function(file) {
+    # Extract the source file name without extension
+    source_file <- tools::file_path_sans_ext(basename(file))
+    
+    # Read the CSV file with semicolon separator
+    data <- read.csv2(file, header = TRUE, stringsAsFactors = FALSE) %>%
+      mutate_all(as.character)
+    
+    # Return the dataframe with an additional column for source file
+    data$sourcefile <- source_file
+    return(data)
+  })
+  
+  # Combine the data frames using full_join iteratively
+  combined_data <- Reduce(function(x, y) {
+    dplyr::full_join(x, y, by = names(x))
+  }, dataframes_list)
+  
+  # Filter out rows where Event.Index is "END OF FILE"
+  combined_data_filtered <- combined_data %>%
+    dplyr::filter(Event.Index != "END OF FILE")
+  
+  # Assign the combined and filtered dataframe to the specified name
+  assign(dataframe_name, combined_data_filtered, envir = .GlobalEnv)
+  
+  # Return the combined and filtered dataframe
+  return(combined_data_filtered)
+}
+
+# Example usage:
+# readinallversions("-vlry.csv", "my_combined_dataframe")
+
+```
+
+```{r}
+read_join_versions <- function(pattern, dataframe_name) {
+  # Get the list of files based on the provided pattern
+  file_list <- list.files(pattern = pattern, full.names = TRUE)
+  
+  # Read in each CSV file into a separate dataframe
+  dataframes_list <- lapply(file_list, function(file) {
+    # Extract the source file name without extension
+    source_file <- tools::file_path_sans_ext(basename(file))
+    
+    # Read the CSV file with semicolon separator
+    data <- read.csv2(file, header = TRUE, stringsAsFactors = FALSE) %>%
+      mutate_all(as.character)
+    
+    # Return the dataframe with an additional column for source file
+    data$sourcefile <- source_file
+    return(data)
+  })
+  
+  # Assign the dataframes to separate variables
+  for (i in seq_along(dataframes_list)) {
+    assign(paste0(dataframe_name, "_", i), dataframes_list[[i]], envir = .GlobalEnv)
+  }
+  
+  # Combine the data frames using full_join iteratively
+  combined_data <- Reduce(function(x, y) {
+    dplyr::full_join(x, y, by = "Participant.Private.ID")
+  }, dataframes_list)
+  
+  # Filter out rows where Event.Index is "END OF FILE"
+  combined_data_filtered <- combined_data %>%
+    dplyr::filter(Event.Index != "END OF FILE")
+  
+  # Assign the combined and filtered dataframe to the specified name
+  assign(dataframe_name, combined_data_filtered, envir = .GlobalEnv)
+  
+  # Return the combined and filtered dataframe
+  return(combined_data_filtered)
+}
+
+# Example usage:
+# read_join_versions("-vlry.csv", "my_combined_dataframe")
+
+```
+
+```{r}
+read_join_versions("-vlry.csv", "df_Consent_Combined")
+print(names(df_Consent_Combined))
+```
+
+```{r}
+read_save_versions <- function(pattern) {
+  # Get the list of files based on the provided pattern
+  file_list <- list.files(pattern = pattern, full.names = TRUE)
+  
+  # Read in each CSV file into a separate dataframe and save them
+  dataframes_list <- lapply(file_list, function(file) {
+    # Extract the source file name without extension
+    source_file <- tools::file_path_sans_ext(basename(file))
+    
+    # Read the CSV file with semicolon separator
+    data <- read.csv2(file, header = TRUE, stringsAsFactors = FALSE) %>%
+      mutate_all(as.character)
+    
+    # Save the dataframe with an additional column for source file
+    assign(paste0(source_file, "_df"), data, envir = .GlobalEnv)
+    
+    return(data)
+  })
+  
+  # Return the list of dataframes
+  return(dataframes_list)
+}
+```
+
+```{r}
+read_save_versions("-vlry.csv") 
+```
+
+
+```{r}
+readinallversions("-vlry.csv")
+
+```
+
+
+```{r}
+#e-mailadress:ykle
+readinallversions("-ykle.csv", "df_emailadress_Combined")
+print(names(df_emailadress_Combined))
+```
+
+```{r}
+#Demographics: s5wi
+readinallversions("-s5wi.csv", "df_Demographics_Combined")
+print(names(df_Demographics_Combined))
+```
+
+
+```{r}
+#CAPE15 version 6
+readinallversions("-t3t7_v6.csv", "df_CAPE15_v6")
+print(names(df_CAPE15_v6))
+```
+
+
+```{r}
+#CAPE15 version 9
+readinallversions("-t3t7_v9.csv", "df_CAPE15_v9")
+print(names(df_CAPE15_v9))
+```
+
+
+```{r}
+#CAPE15 version 10
+readinallversions("-t3t7_v10.csv", "df_CAPE15_v10")
+print(names(df_CAPE15_v10))
+```
+
+```{r}
+#CAPE15 version 11
+readinallversions("-t3t7_v11.csv", "df_CAPE15_v11")
+print(names(df_CAPE15_v11))
+```
+
+```{r}
+#CAPE15 version 12
+readinallversions("-t3t7.csv", "df_CAPE15_v12")
+print(names(df_CAPE15_v12))
+```
+
+
+
+```{r}
+#Cannabisuse: 3ga9
+readinallversions("-3ga9.csv", "df_Cannabisuse_Combined")
+print(names(df_Cannabisuse_Combined))
+
+```
+
+```{r}
+#CEQ_PART1: 6uhi
+readinallversions("-6uhi.csv", "df_CEQ_PART1_Combined")
+print(names(df_CEQ_PART1_Combined))
+```
+
+
+```{r}
+#Regular use: a3ow
+readinallversions("-a3ow.csv", "df_Regular_use_Combined")
+print(names(df_Regular_use_Combined))
+
+```
+
+```{r}
+#current regular use 5j5a
+readinallversions("-5j5a.csv", "df_current_regular_use_Combined")
+print(names(df_current_regular_use_Combined))
+```
+
+
+
+```{r}
+#cannabis use stop: go9y
+readinallversions("-go9y.csv", "df_cannabis_use_stop_Combined")
+print(names(df_cannabis_use_stop_Combined))
+
+```
+
+
+```{r}
+#CEQ_End:q9xg v5
+readinallversions("-q9xg_v5.csv", "df_CEQ_END_Combined_v5")
+print(names(df_CEQ_END_Combined_v5))
+```
+
+
+```{r}
+#CEQ_End:q9xg v8
+readinallversions("-q9xg_v8.csv", "df_CEQ__END_Combined_v8")
+print(names(df_CEQ__END_Combined_v8))
+```
+
+```{r}
+#CEQ_End:q9xg v9
+readinallversions("-q9xg_v9.csv", "df_CEQ__END_Combined_V9")
+print(names(df_CEQ__END_Combined_V9))
+```
+
+```{r}
+#CEQ_End:q9xg v10
+readinallversions("-q9xg_v10.csv", "df_CEQ__END_Combined_v10")
+print(names(df_CEQ__END_Combined_v10))
+```
+
+
+```{r}
+#Questionnaire end:moh2
+readinallversions("moh2.csv", "df_Questionnaire_end_Combined")
+print(names(df_Questionnaire_end_Combined))
+```
+
+```{r}
+#Space Task R1: vigd
+readinallversions("-vigd.csv", "Space_Task_R1_Combined")
+print(names(Space_Task_R1_Combined))
+```
+
+```{r}
+#Space Task R2: g9qm
+readinallversions("-g9qm.csv", "Space_Task_R2_Combined")
+print(names(Space_Task_R2_Combined))
+
+```
+
+```{r}
+#Social Task R1: fch3
+readinallversions("-fch3.csv", "Social_Task_R1_Combined")
+print(names(Social_Task_R1_Combined))
+```
+
+```{r}
+#Social Task R2: j2h4
+readinallversions("-j2h4.csv", "Social_Task_R2_Combined")
+print(names(Social_Task_R2_Combined))
+```
+
+
+
+
+```{r}
+CAPE15_allversions <-  df_CAPE15_v6 %>%
+full_join(df_CAPE15_v9, by = "Participant.Private.ID",suffix = c("", "")) %>%   
+full_join(df_CAPE15_v10, by = "Participant.Private.ID",suffix = c("", ""))  %>%   
+full_join( df_CAPE15_v12, by = "Participant.Private.ID",suffix = c("", "")) 
+print(names(CAPE15_allversions))
+```
+
+```{r}
+CEQ_END_allversions <-  df_CEQ_END_Combined_v5 %>%
+full_join(df_CEQ__END_Combined_v8, suffix = c("", "")) %>%   
+full_join(df_CEQ__END_Combined_V9 ,suffix = c("", ""))  %>%   
+full_join( df_CEQ__END_Combined_v10 ,suffix = c("", "")) 
+print(names(CEQ_END_allversions))
+
+```
+
+```{r}
+Spacetask_allversions <- full_join(Space_Task_R1_Combined,Space_Task_R2_Combined, by = "Participant.Private.ID",suffix = c("", ""))
+print(names(Spacetask_allversions))
+```
+
+
+```{r}
+Socialtask_allversions <- full_join(Social_Task_R1_Combined,Social_Task_R2_Combined, by = "Participant.Private.ID", suffix = c("", ""))
+print(names(Socialtask_allversions))
+```
+
+```{r}
+# I choose my first task as the base and create a new dataset 'final'
+df_all_combined <- df_emailadress_Combined  %>%
+  mutate(task = "E-mail") %>%
+  select(Event.Index,
+UTC.Date.and.Time,
+
+Local.Timestamp,
+
+Local.Timezone,
+
+Local.Date.and.Time,
+
+Participant.Public.ID,
+
+Participant.Private.ID,
+
+Participant.Status,
+
+Participant.Device.Type,
+
+Participant.Device,
+
+Participant.OS,
+
+Participant.Browser,
+
+Checkpoint, e.mail_adress:telephone_number)
+
+
+Demographics <- df_Demographics_Combined %>%
+  mutate(task = "Demographics") %>%
+   select(Participant.Private.ID,age:ethnicity.other)                                                    
+
+CAPE15 <- CAPE15_allversions %>% mutate(task = "CAPE15") %>% select(Participant.Private.ID,"CAPE_15_ever.1":"CAPEP15_3m_15_distress.quantised" )  
+
+  
+Cannabisuse_allparticipants <- df_Cannabisuse_Combined %>%  mutate(task = "Cannabisuse_allparticipants")%>% select(Participant.Private.ID, cannabis_use:cannabis_use.quantised)
+
+Cannabisuse_users <- df_CEQ_PART1_Combined %>%  mutate(task = "Cannabisuse_users") %>% select(Participant.Private.ID, age_first_use: regular_cannabis_use_past) 
+
+Cannabisuse_regularusers <- df_Regular_use_Combined %>%  mutate(task = "Cannabisuse_regularusers") %>% select(Participant.Private.ID,regular_cannabis_use_past_period:current_use_regular.quantised) 
+
+Cannabisuse_currentusers <- df_current_regular_use_Combined %>% mutate(task = "Cannabisuse_currentusers") %>% select(Participant.Private.ID,current_grams_cannabis,current_cannabis_amount_last)
+
+Cannabisuse_stop <- df_cannabis_use_stop_Combined %>% mutate(task = "Cannabisuse_stop") %>% select(Participant.Private.ID,age_stop_cannabis)
+
+Cannabisuse_detailed <- CEQ_END_allversions %>% mutate(task = "Cannabisuse_detailed") %>%  select(Participant.Private.ID,cannabis_affect_health:other_drug.10.4.quantised)
+
+
+Spacetask <- Spacetask_allversions %>% mutate(task = "Spacetask") %>%  select(Participant.Private.ID,originalHint:totalScore)
+
+
+
+Socialtask <- Socialtask_allversions %>% mutate(task = "Socialtask") %>%  select(Participant.Private.ID,Reaction.Time:key)
+
+
+
+```
+
+```{r}
+# Next we can combine both tasks with our base, and then use grouping and filling to copy over the OS, Device, and Date information to the rest of that participant's data
+df_all_questionnaires <-   df_all_combined %>% 
+  full_join(Demographics) %>%
+  full_join(CAPE15) %>%
+  full_join(Cannabisuse_allparticipants) %>%
+  full_join(Cannabisuse_users) %>%
+  full_join(Cannabisuse_regularusers) %>%
+  full_join(Cannabisuse_currentusers) %>%
+  full_join(Cannabisuse_stop) %>%
+  full_join(Cannabisuse_detailed) %>%
+  #full_join(Spacetask, relationship = "many-to-many") %>%
+  #full_join(Socialtask,relationship = "many-to-many") %>%
+  group_by(`Participant.Private.ID`) %>%
+  fill(Event.Index,
+UTC.Date.and.Time,
+
+Local.Timestamp,
+
+Local.Timezone,
+
+Local.Date.and.Time,
+
+Participant.Public.ID,
+
+Participant.Private.ID,
+
+Participant.Status,
+
+Participant.Device.Type,
+
+Participant.Device,
+
+Participant.OS,
+
+Participant.Browser,
+
+Checkpoint)
+```
+
+
+
+
+```{r}
+questionnairelist <- list(Demographics, CAPE15, Cannabisuse_allparticipants, 
+                          Cannabisuse_users, Cannabisuse_regularusers, 
+                          Cannabisuse_currentusers, Cannabisuse_stop, 
+                          Cannabisuse_detailed)
+
+# Loop through the list and write each questionnaire to a CSV file
+for (i in seq_along(questionnairelist)) {
+  questionnaire <- questionnairelist[[i]]
+  write_csv(questionnaire, paste0(names(questionnairelist[i]), ".csv"))
+}
+
+
+
+
+```
+
+```{r}
+write_csv(Demographics, "Demographics.csv")
+```
+

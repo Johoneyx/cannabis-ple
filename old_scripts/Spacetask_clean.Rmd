@@ -1,0 +1,81 @@
+---
+title: "Spacetask_Check"
+author: "Johanna M Groening"
+date: "2024-01-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+ExclusionBasis<-Spacetask_allcombined %>%
+group_by(Participant.Private.ID) %>%
+summarise(  nomoveX=sum(distanceMovedX==0), 
+nomoveY=sum(distanceMovedY==0), 
+nomoveXY=sum(distanceMovedX==0 & distanceMovedY==0), 
+overtime=sum(timeToComplete>5000), 
+undertime=sum(timeToComplete<1000), 
+zerotime=sum(timeToComplete==0),
+excludeX= nomoveX>108, 
+excludeY=nomoveY>108, 
+excludeXY= nomoveXY >21, 
+ excludeOvertime= overtime >21, 
+excludeUndertime= undertime >21) 
+                    
+  IndicesToExclude<-ExclusionBasis %>%
+                                select(starts_with("exclude")) %>%
+                                rowSums()>0
+                IdsToExclude<-ExclusionBasis$Participant.Private.ID[IndicesToExclude]          #extract indices of participants to exclude
+                #IndicesToExclude<-ExclusionBasis %>%
+                               # select(starts_with("exclude")) %>%
+                                #rowSums()>0
+               # IdsToExclude<-ExclusionBasis$Participant.Private.ID[IndicesToExclude]
+```
+
+
+```{r}
+print(ExclusionBasis$excludeX)
+table(ExclusionBasis$excludeX)
+```
+
+```{r}
+ IndicesToExclude<-ExclusionBasis %>%
+                                select(starts_with("exclude")) %>%
+                                rowSums()>0
+                IdsToExclude<-ExclusionBasis$Participant.Private.ID[IndicesToExclude]
+print(IdsToExclude)
+```
+
+```{r}
+  
+            Spacetask_allcombined_ok<-Spacetask_allcombined[!Spacetask_allcombined$Participant.Private.ID %in% IdsToExclude,]
+```
+
+```{r}
+IDs<-unique(Spacetask_allcombined_ok$Participant.Private.ID)
+```
+
+
+```{r}
+df_withoutkenya_withoutSpacetaskexclusion <-without_kenya_df[!without_kenya_df$Participant.Private.ID %in% IdsToExclude,]
+```
+
+```{r}
+
+table(df_withoutkenya_withoutSpacetaskexclusion$Spacetaskdone)
+table(df_withoutkenya_withoutSpacetaskexclusion$Socialtaskdone)
+table(df_withoutkenya_withoutSpacetaskexclusion$branch.huc2)
+table(df_withoutkenya_withoutSpacetaskexclusion$branch.19ea)
+table(df_withoutkenya_withoutSpacetaskexclusion$branch.b8n7)
+```
+
+```{r}
+validIds <- df_withoutkenya_withoutSpacetaskexclusion$Participant.Private.ID
+print(validIds)
+
+
+```
+

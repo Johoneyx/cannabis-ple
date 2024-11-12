@@ -1,0 +1,220 @@
+Participant.Private.ID,age,country.1,country.2,country.text,country.other,sex.1,sex.2,sex.3,sex.text,sex.other,education.1,education.2,education.3,education.4,education.5,education.text,education.other,occupation.1,occupation.2,occupation.3,occupation.4,occupation.5,occupation.text,occupation.other,mental_health_disorder_yes_no.1,mental_health_disorder_yes_no.text,mental_health_disorder_yes_no.other,ethnicity.1,ethnicity.2,ethnicity.3,ethnicity.4,ethnicity.text,ethnicity.other
+6339994,19,United Kingdom,,NA,NA,,Female,NA,NA,NA,NA,High School,,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,No,,,White,,NA,NA,NA,NA
+6340196,22,,Outside United Kingdom,NA,NA,Male,,NA,NA,NA,NA,,Bachelor's Degree,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,No,,,,Asian or Asian British,NA,NA,NA,NA
+6340258,21,United Kingdom,,NA,NA,,Female,NA,NA,NA,NA,,Bachelor's Degree,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,,depression,Yes (please specify),White,,NA,NA,NA,NA
+6340583,26,,Outside United Kingdom,NA,NA,,Female,NA,NA,NA,NA,,Bachelor's Degree,NA,NA,NA,NA,Full time employment,NA,NA,,NA,NA,NA,,Anxiety and Depression ,Yes (please specify),White,,NA,NA,NA,NA
+6341804,35,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,Not employed,,,NA,NA,,CPTSD,Yes (please specify),White,,,,,
+6342203,20,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6342220,26,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,,bpd,Yes (please specify),White,,,,,
+6342299,35,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,,Prefer not to say,NA,NA,No,,,White,,,,,
+6342364,25,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,,"Anxiety, Depression",Yes (please specify),White,,,,,
+6343242,24,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,Part-time employment,,,,NA,NA,,"MDD, panic disorder, PTSD",Yes (please specify),White,,,,,
+6343544,23,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,,,,,cypriot,Other ethnic group (please specify)
+6343613,22,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,,OCD,Yes (please specify),White,,,,,
+6343721,35,United Kingdom,,NA,NA,Male,,,NA,NA,Some High School,,,,NA,NA,NA,,,Not employed,,,NA,NA,,anxiety depression,Yes (please specify),White,,,,,
+6343856,22,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,,depression,Yes (please specify),White,,,,,
+6344107,31,United Kingdom,,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,Not employed,,,NA,NA,,depression anxiety  ptsd,Yes (please specify),White,,,,,
+6344229,31,United Kingdom,,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,Not employed,,,NA,NA,,ptsd depression social anxiety,Yes (please specify),White,,,,,
+6344452,19,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,Part-time employment,,,,NA,NA,No,,,White,,,,,
+6344540,17,United Kingdom,,NA,NA,,Female,,NA,NA,Some High School,,,,NA,NA,NA,,,,Student,,NA,NA,,depression,Yes (please specify),White,,,,,
+6344585,35,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6344605,33,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,No,depression ,Yes (please specify),White,,,,,
+6344725,19,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,Part-time employment,,,,NA,NA,," Bipolar 2, Depression, Anxiety, CPTSD",Yes (please specify),White,,,,,
+6344848,17,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6344889,17,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6346004,17,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6346403,19,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,,Asian or Asian British,,,,
+6354296,19,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,Bachelor's Degree,,NA,NA,NA,,Part-time employment,,Student,,NA,NA,,OCD,Yes (please specify),White,,,,,
+6356014,18,United Kingdom,,NA,NA,,,Non-binary,NA,NA,Some High School,,,,NA,NA,NA,,,,Student,,NA,NA,,"depression, anxiety",Yes (please specify),White,,,,,
+6356296,23,United Kingdom,,NA,NA,Male,,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6356399,36,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,Part-time employment,,,,NA,NA,,Complex PTSD,Yes (please specify),,,,Mixed or Multiple ethnic background,,
+6357156,23,United Kingdom,,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,,,,Mixed or Multiple ethnic background,,
+6357431,24,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,,Asian or Asian British,,,,
+6357807,21,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,,depression,Yes (please specify),White,,,,,
+6358601,31,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,Part-time employment,,,,NA,NA,No,,,White,,,,,
+6359236,20,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6360930,20,United Kingdom,,NA,NA,,,Non-binary,NA,NA,Some High School,,,,NA,NA,NA,,Part-time employment,,,,NA,NA,,"Autism Spectrum disorder, Depression and Anxiety",Yes (please specify),White,,,,,
+6364372,24,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,,ptsd,Yes (please specify),,,,Mixed or Multiple ethnic background,,
+6366070,23,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,,"depression, anxiety",Yes (please specify),,,Black/Black African/Black Caribbean/Black British,,,
+6370303,29,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,,Asian or Asian British,,,,
+6372142,26,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6392010,24,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,,,,,,Other ethnic group (please specify)
+6436182,22,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,No,,,,Asian or Asian British,,,,
+6436271,29,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6436306,21,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,,Anxiety,Yes (please specify),,,,Mixed or Multiple ethnic background,,
+6436389,25,United Kingdom,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,Part-time employment,,Student,,NA,NA,No,,,,,,Mixed or Multiple ethnic background,,
+6442290,22,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6443448,24,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,,Asian or Asian British,,,,
+6443994,24,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,,anxiety,Yes (please specify),White,,,,,
+6448666,35,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6451222,20,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,,,,Mixed or Multiple ethnic background,,
+6468236,32,United Kingdom,,NA,NA,,,Non-binary,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,Not employed,,,NA,NA,,"Autism spectrum disorder, ADHD, OCD",Yes (please specify),White,,,,,
+6477069,31,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,No,,,,Asian or Asian British,,,,
+6504164,18,United Kingdom,,NA,NA,,,Non-binary,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,Student,,NA,NA,,"EUPD, autism ",Yes (please specify),White,,,,,
+6509995,20,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,,"borderline personality disorder (EUPD), depression, anxiety",Yes (please specify),White,,,,,
+6517523,30 years,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+6518307,44,United Kingdom,,NA,NA,,Female,,NA,NA,Some High School,,,,NA,NA,NA,,,Not employed,,,NA,NA,,"depression,anxiexty,ptsd,Dissociative disorder,acute psychosis thats only temporary i dont persinally think i have got it as theres some cruel people playing nasty mind games with me i just have had to take it for way too long now however my depression and other mental health issues have been there from teenage years ",Yes (please specify),White,,,,,
+6526786,25,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6533214,32,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,Not employed,,,NA,NA,,"anxiety, PTSD, borderline Personality ",Yes (please specify),White,,,,,
+6615955,34,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6654271,28,United Kingdom,,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+6655120,20,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,Part-time employment,,Student,,NA,NA,,"Social anxiety, panic disorder",Yes (please specify),White,,,,,
+6655159,20,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,Part-time employment,,,,NA,NA,,"ADHD, anxiety, depression",Yes (please specify),White,,,,,
+6655410,23,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,Not employed,,,NA,NA,No,,,,Asian or Asian British,,,,
+6655427,25,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,Part-time employment,,Student,,NA,NA,,"anxiety, depression, disordered eating",Yes (please specify),White,,,,,
+6662576,29,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,Full time employment,,,,,NA,NA,,"adhd, anxiety ",Yes (please specify),,Asian or Asian British,,,,
+6664340,25,United Kingdom,,NA,NA,,,Non-binary,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,,"anxiety, depression",Yes (please specify),,Asian or Asian British,,,,
+6668168,26,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6668903,21,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,,complex ptsd ,Yes (please specify),White,,,,,
+6676026,23,,Outside United Kingdom,NA,NA,,,Non-binary,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,,"OCD, general anxiety disorder",Yes (please specify),White,,,,,
+6676195,31,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6676385,41,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6676398,24,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,Student,,NA,NA,,"Depression, OCD, mild ASD (previously referred to as 'Asperger's Syndrome')",Yes (please specify),White,,,,,
+6676617,23,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,,Asian or Asian British,,,,
+6676629,"18, about to be 19 in August ",,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,,"ADHD, Generalized anxiety disorder",Yes (please specify),White,,,,,
+6676673,19,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,,"GAD, severe depression",Yes (please specify),,Asian or Asian British,,,,
+6676724,25,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,,"depression, anxiety, ADHD",Yes (please specify),White,,,,,
+6680322,38,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6680486,30,,Outside United Kingdom,NA,NA,,,Non-binary,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,Not employed,,,NA,NA,,"BPD, ADHD",Yes (please specify),,,,,hispanic,Other ethnic group (please specify)
+6684566,21,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,,Depression,Yes (please specify),White,,,,,
+6687432,17,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6688949,28,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,,Asian or Asian British,,,,
+6695907,19,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,,"GAD, depression",Yes (please specify),,Asian or Asian British,,,,
+6712673,27,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+6736496,24,United Kingdom,,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,,depression ,Yes (please specify),White,,,,,
+6739231,31,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6739380,26,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,,,Prefer not to say,NA,NA,,Major Depressive Disorder,Yes (please specify),White,,,,,
+6740417,35,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,Full time employment,,,,,NA,NA,,"depression, anxiety ",Yes (please specify),White,,,,,
+6740641,28,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6741139,27,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,No,,,,,,,hispanic,Other ethnic group (please specify)
+6741208,29,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,,C-PTSD,Yes (please specify),White,,,,,
+6743228,26,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6743778,30,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,,Anxiety ,Yes (please specify),White,,,,,
+6744630,18,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,No,,,White,,,,,
+6745062,22,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,,,,Student,,NA,NA,No,,,,,,Mixed or Multiple ethnic background,Latino/White mix,Other ethnic group (please specify)
+6745138,25,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,,Master's Degree,NA,NA,NA,,,,Student,,NA,NA,,"depression, anxiety, adhd",Yes (please specify),White,,,,,
+6745827,24,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,,"PTSD, Bipolar 2, Generalized Anxiety",Yes (please specify),White,,,,,
+6745887,23,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,,"Bipolar 2, GAD",Yes (please specify),White,,,,,
+6746395,18,,Outside United Kingdom,NA,NA,,,Non-binary,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,,Depression,Yes (please specify),White,,,,,
+6747235,23,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,,,NA,NA,,"ADHD, Depression, GAD (Generalized Anxiety Disorder)",Yes (please specify),,,,Mixed or Multiple ethnic background,,
+6749502,19,,Outside United Kingdom,NA,NA,,,Non-binary,NA,NA,,High School,,,NA,NA,NA,,Part-time employment,,Student,,NA,NA,,"ASD, ADHD, Social Anxiety and GAD",Yes (please specify),White,,,,,
+6750006,22,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,,,Prefer not to say,NA,NA,No,,,White,,,,,
+6752224,27,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,No,,,White,,,,,
+6753189,21,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,Full time employment,,,Student,,NA,NA,,"Generalised Anxiety Disorder, Depression, ASD, ADHD",Yes (please specify),White,,,,,
+6753347,28,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,No,,,,Asian or Asian British,,,,
+6753703,19,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,,Depression,Yes (please specify),,,,Mixed or Multiple ethnic background,,
+6753707,16,,Outside United Kingdom,NA,NA,Male,,,NA,NA,Some High School,,,,NA,NA,NA,,,,Student,,NA,NA,No,,,,Asian or Asian British,,,,
+6758225,21,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,Not employed,,,NA,NA,No,,,White,,,,,
+6774457,19,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,Part-time employment,,Student,,NA,NA,No,,,,Asian or Asian British,,,,
+6780976,23,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,,NA,NA,No,,,White,,,,,
+6816244,17,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,NA,NA,NA,,,,Student,,NA,NA,,"Anxiety, Depression",Yes (please specify),White,,,,,
+6825326,17,United Kingdom,NA,NA,NA,Male,,NA,NA,NA,NA,High School,,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,No,,,White,NA,NA,,NA,NA
+6825446,19,United Kingdom,NA,NA,NA,,Female,NA,NA,NA,NA,High School,,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,,depression and anxiety ,Yes (please specify),White,NA,NA,,NA,NA
+6825473,25,United Kingdom,NA,NA,NA,,Female,NA,NA,NA,NA,,Bachelor's Degree,NA,NA,NA,NA,Full time employment,NA,NA,,NA,NA,NA,No,,,White,NA,NA,,NA,NA
+6825513,22,United Kingdom,NA,NA,NA,Male,,NA,NA,NA,NA,,Bachelor's Degree,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,No,,,,NA,NA,Mixed or Multiple ethnic background,NA,NA
+6825973,17,United Kingdom,NA,NA,NA,,Female,NA,NA,NA,NA,High School,,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,No,,,White,NA,NA,,NA,NA
+6843820,17,United Kingdom,NA,NA,NA,,Female,NA,NA,NA,NA,High School,,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,No,,,White,NA,NA,,NA,NA
+6843821,17,United Kingdom,NA,NA,NA,,Female,NA,NA,NA,NA,High School,,NA,NA,NA,NA,,NA,NA,Student,NA,NA,NA,,anexity ,Yes (please specify),White,NA,NA,,NA,NA
+6847704,29,,Outside United Kingdom,NA,NA,Male,NA,NA,NA,NA,NA,NA,Bachelor's Degree,NA,NA,NA,NA,NA,Part-time employment,,NA,NA,NA,NA,No,NA,NA,,NA,Black/Black African/Black Caribbean/Black British,NA,NA,NA
+6847838,22,United Kingdom,,NA,NA,Male,NA,NA,NA,NA,NA,NA,Bachelor's Degree,NA,NA,NA,NA,NA,,Not employed,NA,NA,NA,NA,No,NA,NA,White,NA,,NA,NA,NA
+6848225,31,United Kingdom,,NA,NA,,,,NA,NA,,,,Master's Degree,,NA,NA,Full time employment,,NA,,NA,NA,NA,,adhd,Yes (please specify),,NA,,,turkish,Other ethnic group (please specify)
+6848387,31,United Kingdom,,NA,NA,,Female,,NA,NA,,,,Master's Degree,,NA,NA,Full time employment,,NA,,NA,NA,NA,,adhd,Yes (please specify),,NA,,,"turkish (usually ""other white"")",Other ethnic group (please specify)
+6848700,24,United Kingdom,,NA,NA,,,Non-binary,NA,NA,,High School,Bachelor's Degree,Master's Degree,,NA,NA,Full time employment,,NA,,NA,NA,NA,,"BPD with co-existing depression, ADHD",Yes (please specify),,NA,Black/Black African/Black Caribbean/Black British,,,
+6848718,29,,Outside United Kingdom,NA,NA,Male,,,NA,NA,,,,Master's Degree,,NA,NA,Full time employment,,NA,,NA,NA,NA,No,,,White,NA,,,,
+6849268,31,United Kingdom,,NA,NA,,Female,,NA,NA,,High School,,,,NA,NA,Full time employment,,NA,,NA,NA,NA,No,,,White,NA,,,,
+6850800,28,,Outside United Kingdom,NA,NA,Male,,,NA,NA,Some High School,,,,,NA,NA,,Part-time employment,NA,,NA,NA,NA,No,,,White,NA,,,,
+6850839,26,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,,Master's Degree,,NA,NA,,,NA,Student,NA,NA,NA,,bulimia,Yes (please specify),White,NA,,,,
+6850848,28,,Outside United Kingdom,NA,NA,,Female,,NA,NA,,,Bachelor's Degree,,,NA,NA,Full time employment,,NA,,NA,NA,NA,No,,,,NA,Black/Black African/Black Caribbean/Black British,Mixed or Multiple ethnic background,,
+6852713,31,United Kingdom,,NA,NA,Male,,,NA,NA,,,Bachelor's Degree,,,NA,NA,,Part-time employment,NA,,NA,NA,NA,No,,,White,NA,,,,
+6853667,24,United Kingdom,,NA,NA,,,Non-binary,NA,NA,,,,,PhD or higher,NA,NA,,,NA,Student,NA,NA,NA,No,,,White,NA,,,,
+6863080,20,United Kingdom,,NA,NA,Male,,,NA,NA,,High School,,,,NA,NA,,,NA,Student,NA,NA,NA,No,,,White,NA,,,,
+6886190,29,,Outside United Kingdom,NA,NA,,,Non-binary,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,Full time employment,NA,,NA,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,NA,NA
+6886327,32,United Kingdom,,NA,NA,,,,NA,NA,NA,High School,Bachelor's Degree,,NA,NA,NA,Full time employment,NA,,NA,NA,NA,NA,,"adhd, autism, dyslexia ",Yes (please specify),White,,,,NA,NA
+6887122,23,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,High School,,,NA,NA,NA,Full time employment,NA,,NA,NA,NA,NA,,"Obsessive Compulsive Disorder, ADHD, Bipolar II",Yes (please specify),White,,,,NA,NA
+6887679,18,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,High School,,,NA,NA,NA,,NA,Not employed,NA,NA,NA,NA,,bipolar depression & anxiety ,Yes (please specify),,,,Mixed or Multiple ethnic background,NA,NA
+6898756,28,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,Full time employment,NA,,NA,NA,NA,NA,No,,,White,,,,NA,NA
+6911848,26,United Kingdom,,NA,NA,,Female,,NA,NA,NA,High School,Bachelor's Degree,,NA,NA,NA,Full time employment,NA,,NA,NA,NA,NA,,"ADHD, Depression ",Yes (please specify),,Asian or Asian British,,,NA,NA
+6914740,23,United Kingdom,,NA,NA,,Female,,NA,NA,NA,High School,,,NA,NA,NA,,NA,Not employed,NA,NA,NA,NA,,eupd,Yes (please specify),White,,,,NA,NA
+6923725,33,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,,,Master's Degree,NA,NA,NA,Full time employment,NA,,NA,NA,NA,NA,No,,,White,,,,NA,NA
+7510465,30,United Kingdom,,NA,NA,Male,,,NA,NA,NA,High School,,,NA,NA,NA,Full time employment,,,,NA,NA,NA,No,,,White,,,NA,NA,NA
+7520723,25,United Kingdom,,NA,NA,,Female,,NA,NA,NA,,,Master's Degree,NA,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7518980,23,United Kingdom,,NA,NA,,Female,,NA,NA,NA,,,Master's Degree,NA,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7532853,28,,Outside United Kingdom,NA,NA,,,Non-binary,NA,NA,NA,,,Master's Degree,NA,NA,NA,,,Not employed,,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,NA,NA,NA
+7540159,33,,Outside United Kingdom,NA,NA,,Female,,NA,NA,NA,High School,,,NA,NA,NA,,Part-time employment,,,NA,NA,NA,,"ptsd, depression ",Yes (please specify),White,,,NA,NA,NA
+7540849,29,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7540871,22,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7541293,27,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,,,Master's Degree,NA,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7542815,26,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7543027,21,,Outside United Kingdom,NA,NA,Male,,,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7543655,21,United Kingdom,,NA,NA,Male,,,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+7544344,25,,Outside United Kingdom,NA,NA,,Female,,NA,NA,NA,,Bachelor's Degree,,NA,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,NA,NA,NA
+8254854,28,,NA,India ,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,,,,South Asian,Other ethnic group (please specify)
+8255340,20,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,,,,Southern Asian,Other ethnic group (please specify)
+8257404,20,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,,,,Indian,Other ethnic group (please specify)
+8257935,23,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,,,,Indian,Other ethnic group (please specify)
+8258757,20,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,No,,,,,,,Arab,Other ethnic group (please specify)
+8259000,22,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,,depression,Yes (please specify),,,,Mixed or Multiple ethnic background,,
+8259417,24,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,Not employed,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8259541,26,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,,Depression ,Yes (please specify),,Asian or Asian British,,,,
+8259640,23,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,High School,,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8261021,21,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,Master's Degree,,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8261917,24,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+8263912,25,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8265580,33,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,,"generalized anxiety disorder, depression",Yes (please specify),White,,,,,
+8265632,22,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,Not employed,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8266923,21,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8268506,26,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8272022,31,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8274062,26,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,Not employed,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8275629,28,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,,"Bipolar, depression",Yes (please specify),,Asian or Asian British,,,,
+8282170,27,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8282559,27,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,White,,,,,
+8282817,25,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8283009,27,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,Not employed,,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+8283265,25,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,White,,,,,
+8284277,28,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8284688,27,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8285275,31,,NA,INDIA,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8289165,24,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+8290416,20,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,,ADHD and anxiety ,Yes (please specify),,Asian or Asian British,,,,
+8290496,28,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,,PhD or higher,NA,NA,Full time employment,,,,NA,NA,NA,No,,,White,,,,,
+8290750,20,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,,Anxiety and ADHD,Yes (please specify),,Asian or Asian British,,,,
+8294921,25,,NA,India,Other (please specify),Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,,,,South Asian,Other ethnic group (please specify)
+8296767,23,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+8302231,30,,NA,India,Other (please specify),,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8315650,25,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8328183,24,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+8335258,19,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,,"depression, anxiety, anorexiA",Yes (please specify),White,,,,,
+8336875,25,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,Master's Degree,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,White,,,,,
+8336882,22,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,,Autism spectrum disorder,Yes (please specify),White,,,,,
+8336908,24,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,Master's Degree,,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8336935,20,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,,ADHD,Yes (please specify),White,,,,,
+8336957,21,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,Part-time employment,,,NA,NA,NA,,Depression/anixety,Yes (please specify),White,,,,,
+8337025,34,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,,PhD or higher,NA,NA,Full time employment,,,,NA,NA,NA,No,,Yes (please specify),,Asian or Asian British,,,,
+8337089,23,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,Master's Degree,,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,White,,,,,
+8337125,18,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,No,,,,,,Mixed or Multiple ethnic background,,
+8337184,22,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8337342,22,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8337412,22,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8337692,27,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,,Master's Degree,,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8337833,22,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,,Panic Disorder,Yes (please specify),White,,,,,
+8337845,23,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,White,,,,,
+8337880,30,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,,PhD or higher,NA,NA,Full time employment,,,,NA,NA,NA,,Generalised Anxiety Disorder,Yes (please specify),White,,,,,
+8337968,18,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8338349,19,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8338600,25,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,White,,,,,
+8339276,25,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,Master's Degree,,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8339554,20,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,,Anxiety ,Yes (please specify),White,,,,,
+8338126,30,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,Full time employment,,,,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8339841,19,United Kingdom,NA,,,,Female,NA,NA,NA,NA,High School,,,,NA,NA,,,,Student,NA,NA,NA,,ADHD-C,Yes (please specify),,Asian or Asian British,,,,
+8339855,22,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8340080,23,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,,Depression and Anxiety,Yes (please specify),White,,,,,
+8340943,33,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,Master's Degree,,NA,NA,Full time employment,,,,NA,NA,NA,,EIPS,Yes (please specify),White,,,,,
+8341073,23,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,,,PhD or higher,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8341313,22,,NA,United States,Other (please specify),Male,,NA,NA,NA,NA,High School,,,,NA,NA,,Part-time employment,,,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+8341387,19,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,,Depression and Anxiety disorder ,Yes (please specify),White,,,,,
+8341777,19,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,
+8341968,22,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,,Master's Degree,,NA,NA,,,,Student,NA,NA,NA,No,,,,Asian or Asian British,,,,
+8343746,29,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,,PhD or higher,NA,NA,Full time employment,,,,NA,NA,NA,No,,,White,,,,,
+8344551,23,United Kingdom,NA,,,Male,,NA,NA,NA,NA,,Bachelor's Degree,,,NA,NA,,,Not employed,,NA,NA,NA,No,,,,,Black/Black African/Black Caribbean/Black British,,,
+8345123,30,United Kingdom,NA,,,,Female,NA,NA,NA,NA,,,,PhD or higher,NA,NA,,,,Student,NA,NA,NA,No,,,White,,,,,

@@ -1,0 +1,444 @@
+---
+title: "CANTRIPS_datacleaning.11.1.2024"
+author: "Johanna M Groening"
+date: "2024-01-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(psych)
+library(plyr)
+library(tidyverse)
+library(dplyr)
+```
+
+```{r}
+find_common_variables<-function(dflist){
+column_names_list <- lapply(dflist, names)
+
+common_columns <- Reduce(intersect, column_names_list)
+
+print(common_columns)
+}
+
+```
+
+
+```{r}
+readinallversions <- function(file_name_ending, df_name) {
+  data_frames <- list()
+  
+  for (version in c(40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16)) {
+    file_name <- paste0("data_exp_74063-v", version, file_name_ending)
+    data_frames[[paste0(df_name, version)]] <- read.csv(file_name, sep=";")
+  }
+  
+  return(data_frames)
+}
+
+```
+
+
+```{r}
+read_combine_allversions <- function(file_name_ending, df_name) {
+  data_frames <- list()
+  
+  for (version in c(40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16)) {
+    file_name <- paste0("data_exp_74063-v", version, file_name_ending)
+    data_frames[[paste0(df_name, version)]] <- read.csv(file_name, sep=";")
+  }
+  # Extract the column names from each data frame
+column_names_list <- lapply(data_frames, names)
+  # Find the common columns using Reduce and intersect
+common_columns <- Reduce(intersect, column_names_list)
+combined_data <- data_frames[[1]]
+
+for (i in 2:length(data_frames)) {
+  combined_data <- full_join(combined_data, data_frames[[i]], by = common_columns)
+}
+
+  return(combined_data)
+}
+
+
+```
+
+```{r}
+read_combine_convert_allversions <- function(file_name_ending, df_name) {
+  data_frames <- list()
+  
+  for (version in c(40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16)) {
+    file_name <- paste0("data_exp_74063-v", version, file_name_ending)
+    data_frames[[paste0(df_name, version)]] <- read.csv(file_name, sep=";")
+  }
+  
+  # Convert all variables to character in each data frame
+  data_frames <- lapply(data_frames, function(df) {
+    df[] <- lapply(df, as.character)
+    return(df)
+  })
+  
+  # Extract the column names from each data frame
+  column_names_list <- lapply(data_frames, names)
+  
+  # Find the common columns using Reduce and intersect
+  common_columns <- Reduce(intersect, column_names_list)
+  
+  combined_data <- data_frames[[1]]
+  
+  for (i in 2:length(data_frames)) {
+    combined_data <- full_join(combined_data, data_frames[[i]], by = common_columns)
+  }
+  
+  return(combined_data)
+}
+
+```
+
+
+```{r}
+read_combine_convert_versions31to40 <- function(file_name_ending, df_name) {
+  data_frames <- list()
+  
+  for (version in c(40, 39, 38, 37, 36, 35, 34, 33, 32, 31)) {
+    file_name <- paste0("data_exp_74063-v", version, file_name_ending)
+    data_frames[[paste0(df_name, version)]] <- read.csv(file_name, sep=";")
+  }
+  
+  # i converted everything to character because R has problems with different datatypes
+  data_frames <- lapply(data_frames, function(df) {
+    df[] <- lapply(df, as.character)
+    return(df)
+  })
+  
+  column_names_list <- lapply(data_frames, names)
+  
+  common_columns <- Reduce(intersect, column_names_list)
+  
+  combined_data <- data_frames[[1]]
+  
+  for (i in 2:length(data_frames)) {
+    combined_data <- full_join(combined_data, data_frames[[i]], by = common_columns)
+  }
+  
+  return(combined_data)
+}
+
+```
+
+```{r}
+read_combine_convert_versions16to30 <- function(file_name_ending, df_name) {
+  data_frames <- list()
+  
+  for (version in c(30, 29, 28, 27, 26, 25, 24, 23, 21, 20, 19, 18, 17, 16)) {
+    file_name <- paste0("data_exp_74063-v", version, file_name_ending)
+    data_frames[[paste0(df_name, version)]] <- read.csv(file_name, sep=";")
+  }
+  
+  data_frames <- lapply(data_frames, function(df) {
+    df[] <- lapply(df, as.character)
+    return(df)
+  })
+  
+  column_names_list <- lapply(data_frames, names)
+  
+  common_columns <- Reduce(intersect, column_names_list)
+  
+  combined_data <- data_frames[[1]]
+  
+  for (i in 2:length(data_frames)) {
+    combined_data <- full_join(combined_data, data_frames[[i]], by = common_columns)
+  }
+  
+  return(combined_data)
+}
+
+```
+
+```{r}
+read_combine_convert_versions22to40 <- function(file_name_ending, df_name) {
+  data_frames <- list()
+  
+  for (version in c(40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22)) {
+    file_name <- paste0("data_exp_74063-v", version, file_name_ending)
+    data_frames[[paste0(df_name, version)]] <- read.csv(file_name, sep=";")
+  }
+  
+  data_frames <- lapply(data_frames, function(df) {
+    df[] <- lapply(df, as.character)
+    return(df)
+  })
+  
+  column_names_list <- lapply(data_frames, names)
+  
+
+  common_columns <- Reduce(intersect, column_names_list)
+  
+  combined_data <- data_frames[[1]]
+  
+  for (i in 2:length(data_frames)) {
+    combined_data <- full_join(combined_data, data_frames[[i]], by = common_columns)
+  }
+  
+  return(combined_data)
+}
+
+```
+
+
+```{r}
+read_combine_convert_versions16to21 <- function(file_name_ending, df_name) {
+  data_frames <- list()
+  
+  for (version in c(21, 20, 19, 18, 17, 16)) {
+    file_name <- paste0("data_exp_74063-v", version, file_name_ending)
+    data_frames[[paste0(df_name, version)]] <- read.csv(file_name, sep=";")
+  }
+  
+
+  data_frames <- lapply(data_frames, function(df) {
+    df[] <- lapply(df, as.character)
+    return(df)
+  })
+  
+
+  column_names_list <- lapply(data_frames, names)
+  
+  common_columns <- Reduce(intersect, column_names_list)
+  
+  combined_data <- data_frames[[1]]
+  
+  for (i in 2:length(data_frames)) {
+    combined_data <- full_join(combined_data, data_frames[[i]], by = common_columns)
+  }
+  
+  return(combined_data)
+}
+
+```
+
+
+
+```{r}
+df_consent_all <-read_combine_convert_allversions("_questionnaire-vlry.csv","df_consent")
+print(names(df_consent_all))
+```
+
+
+```{r}
+#e-mailadress:ykle
+df_email_combined<- read_combine_convert_allversions("_questionnaire-ykle.csv","df_email")
+print(names(df_email_combined))
+
+```
+
+```{r}
+#Demographics: s5wi
+df_demographics_combined <- read_combine_convert_allversions("_questionnaire-s5wi.csv","df_demographics")
+print(names(df_demographics_combined))
+```
+
+
+```{r}
+#CAPE15
+df_CAPE15_combined<- read_combine_convert_allversions("_questionnaire-t3t7.csv","df_CAPE15")
+print(names(df_CAPE15_combined))
+```
+
+
+```{r}
+#Cannabisuse: 3ga9
+df_cannabisuse_combined<- read_combine_convert_allversions("_questionnaire-3ga9.csv","df_cannabisuse")
+print(names(df_CAPE15_combined))
+```
+
+```{r}
+#CEQ_PART1: 6uhi
+df_CEQ_Part1_combined<- read_combine_convert_allversions("_questionnaire-6uhi.csv","df_CEQ_Part1")
+print(names(df_CEQ_Part1_combined))
+```
+
+
+```{r}
+#Regular use: a3ow
+df_regularuse_combined<-read_combine_convert_allversions("_questionnaire-a3ow.csv", "df_regularuse")
+print(names(df_regularuse_combined))
+
+```
+
+
+```{r}
+#current regular use 5j5a
+df_currentregularuse_combined<-read_combine_convert_allversions("_questionnaire-5j5a.csv", "df_currentregularuse")
+print(names(df_currentregularuse_combined))
+```
+
+
+```{r}
+#cannabis use stop: go9y
+
+df_cannabisusestop_combined<-read_combine_convert_allversions("_questionnaire-go9y.csv", "df_cannabisusestop")
+print(names(df_cannabisusestop_combined))
+
+```
+
+```{r}
+#CEQ_End:q9xg 
+df_CEQ_end_combined<-read_combine_convert_allversions("_questionnaire-q9xg.csv", "df_CEQ_end")
+print(names(df_CEQ_end_combined))
+```
+
+```{r}
+#Questionnaire end:moh2
+df_Questionnaire_end_combined<-read_combine_convert_allversions("_questionnaire-moh2.csv", "df_Questionnaire_end")
+print(names(df_Questionnaire_end_combined))
+```
+
+
+```{r}
+#Space Task R1: vigd
+Spacetask_R1_v31to40 <- read_combine_convert_versions31to40("_task-vigd.csv", "Space_Task_R1")
+print(names(Spacetask_R1_v31to40 ))
+```
+
+```{r}
+Spacetask_R1_v16to30 <-read_combine_convert_versions16to30("_task-uyaf.csv", "Spacetask_R1")
+print(names(Spacetask_R1_v16to30))
+```
+
+
+```{r}
+#Space Task R2: g9qm
+Spacetask_R2_v31to40<-read_combine_convert_versions31to40("_task-g9qm.csv", "Spacetask_R2")
+print(names(Spacetask_R2_v31to40))
+
+```
+
+
+```{r}
+#Space Task R2: g9qm
+Spacetask_R2_v16to30<-read_combine_convert_versions16to30("_task-6sm9.csv", "Spacetask_R2")
+print(names(Spacetask_R2_v16to30))
+
+```
+```{r}
+Spacetasklist <- list(Spacetask_R1_v16to30,Spacetask_R1_v31to40,Spacetask_R2_v16to30,Spacetask_R2_v31to40)
+```
+
+
+```{r}
+common_columns_spacetask <- find_common_variables(Spacetasklist)
+column_names_spacetask <- lapply(Spacetasklist, names)
+  
+  # Find the common columns using Reduce and intersect
+  common_columns <- Reduce(intersect, column_names_spacetask)
+  
+  combined_data <- Spacetasklist[[1]]
+  
+  for (i in 2:length(Spacetasklist)) {
+    Spacetask_allcombined <- full_join(combined_data, Spacetasklist[[i]], by = common_columns_spacetask)
+  }
+  
+```
+
+```{r}
+print(names(Spacetask_allcombined))
+```
+
+```{r}
+#Social Task R1: fch3
+Socialtask_R1_all<-read_combine_convert_allversions("_task-fch3.csv", "Socialtask_R1")
+print(names(Socialtask_R1_all))
+```
+
+
+```{r}
+#Social Task R2: j2h4
+Socialtask_R2_v22to40<-read_combine_convert_versions22to40("_task-j2h4.csv", "Social_Task_R2")
+print(names(Socialtask_R2_v22to40))
+```
+
+
+```{r}
+#Social Task R2: j2h4
+Socialtask_R2_v16to21<-read_combine_convert_versions16to21("_task-gtz3.csv", "Social_Task_R2")
+print(names(Socialtask_R2_v16to21))
+```
+
+```{r}
+Socialtasklist<-list(Socialtask_R1_all,Socialtask_R2_v16to21,Socialtask_R2_v22to40)
+
+```
+
+```{r}
+find_common_variables(Socialtasklist)
+```
+
+```{r}
+common_columns_socialtask <- find_common_variables(Socialtasklist)
+column_names_list <- lapply(Socialtasklist, names)
+  
+  # Find the common columns using Reduce and intersect
+  common_columns <- Reduce(intersect, column_names_list)
+  
+  combined_data <- Socialtasklist[[1]]
+  
+  for (i in 2:length(Socialtasklist)) {
+    Socialtask_allcombined <- full_join(combined_data, Socialtasklist[[i]], by = common_columns_socialtask)
+  }
+  
+  
+```
+
+
+```{r}
+print(names(Socialtask_allcombined))
+```
+
+
+```{r}
+ls()
+```
+
+```{r}
+list_all <- list(df_CAPE15_combined, df_email_combined, df_cannabisuse_combined, df_cannabisusestop_combined, df_currentregularuse_combined,df_CEQ_Part1_combined, df_CEQ_end_combined, df_Questionnaire_end_combined, Spacetask_allcombined, Socialtask_allcombined)
+```
+
+```{r}
+all_common_variables <- find_common_variables(list_all)
+
+```
+
+```{r}
+# Next we can combine both tasks with our base, and then use grouping and filling to copy over the OS, Device, and Date information to the rest of that participant's data
+df_all_combined <-   df_consent_all %>% 
+  full_join(df_demographics_clean) %>%
+  full_join(df_CAPE15_clean) %>%
+  full_join(df_email_combined) %>%
+  full_join(df_cannabisuse_combined) %>%
+  full_join(df_cannabisusestop_combined) %>%
+  full_join(df_currentregularuse_combined) %>%
+  full_join(df_CEQ_Part1_combined) %>%
+  full_join(df_CEQ_end_combined) %>%
+  full_join(df_Questionnaire_end_combined) %>%
+  #full_join(Spacetask_allcombined,relationship = "many-to-many") %>%
+  #full_join(Socialtask_allcombined,relationship = "many-to-many") %>%
+  group_by(`Participant.Private.ID`) %>%
+  fill(Event.Index, UTC.Timestamp,UTC.Date.and.Time, Local.Timestamp ,                Local.Timezone,Local.Date.and.Time, Experiment.ID,Experiment.Version,Tree.Node.Key, Repeat.Key,Schedule.ID, Participant.Public.ID, Participant.Private.ID ,         Participant.Starting.Group,Participant.Status,Participant.Completion.Code, Participant.External.Session.ID, Participant.Device.Type ,       
+Participant.Device ,Participant.OS , Participant.Browser, Participant.Monitor.Size ,       Participant.Viewport.Size ,Checkpoint,Room.ID , Room.Order, Task.Name  ,                    Task.Version , branch.huc2,branch.19ea, branch.b8n7,checkpoint.if5t, checkpoint.ezzj, checkpoint.lxys,checkpoint.n8ox,checkpoint.h7in,checkpoint.prqz, checkpoint.l38h ,checkpoint.oafw, branch.x43a,randomiser.b8xo , checkpoint.zp1s, checkpoint.zmw5 ) 
+```
+
+```{r}
+write_csv(df_cannabisusestop_combined,"df_cannabisusestop_combined.csv")
+write_csv(df_currentregularuse_combined,"df_currentregularuse_combined.csv")
+write_csv(df_CEQ_Part1_combined,"df_CEQ_Part1_combined.csv")
+write_csv(df_CEQ_end_combined,"df_CEQ_end_combined.csv")
+```
+
+
+
+

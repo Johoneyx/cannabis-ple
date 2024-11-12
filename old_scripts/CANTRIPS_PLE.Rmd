@@ -1,0 +1,284 @@
+---
+title: "CANTRIPS_PLE"
+author: "Johanna M Groening"
+date: "2024-01-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+df_CAPE15_clean <- as.tibble(df_CAPE15_combined)
+```
+
+
+```{r}
+columns_PLE_ever1to15 <- grep("CAPE_15_ever", names(df_CAPE15_clean), value = TRUE)
+
+
+df_CAPE15_clean$PLE_ever1to15<- apply(df_CAPE15_clean[columns_PLE_ever1to15 ], 1, function(row) {
+  non_na_values <- row[!is.na(row)]
+  if(length(non_na_values) > 0) {
+    return(paste(non_na_values, collapse = "+"))
+  } else {
+    return(NA)
+  }
+})
+
+
+table(df_CAPE15_clean$PLE_ever1to15)
+```
+
+```{r}
+
+columns_PLE_3m1to15 <- grep("CAPE15_3m", names(df_CAPE15_clean), value = TRUE)
+
+
+df_CAPE15_clean$PLE_3m1to15<- apply(df_CAPE15_clean[columns_PLE_ever1to15 ], 1, function(row) {
+  non_na_values <- row[!is.na(row)]
+  if(length(non_na_values) > 0) {
+    return(paste(non_na_values, collapse = "+"))
+  } else {
+    return(NA)
+  }
+})
+
+table(df_CAPE15_clean$PLE_3m1to15)
+```
+
+```{r}
+
+columns_quantised <- grep("quantised", names(df_CAPE15_clean), value = TRUE)
+
+
+df_CAPE15_clean$quantised<- apply(df_CAPE15_clean[columns_quantised  ], 1, function(row) {
+  non_na_values <- row[!is.na(row)]
+  if(length(non_na_values) > 0) {
+    return(paste(non_na_values, collapse = "+"))
+  } else {
+    return(NA)
+  }
+})
+
+table(df_CAPE15_clean$quantised)
+```
+
+```{r}
+
+ber of values separated by "+"
+df_CAPE15_clean$nQuestionsanswered <- sapply(strsplit(df_CAPE15_clean$quantised, "\\+"), length)
+
+
+print(df_CAPE15_clean$nQuestionsanswered)
+```
+
+```{r}
+df_CAPE15_clean$evaluated_result <- sapply(df_CAPE15_clean$quantised, function(expression) {
+  eval(parse(text = expression))
+})
+print(df_CAPE15_clean$evaluated_result)
+```
+
+
+```{r}
+
+df_CAPE15_clean$weightedscore <- as.numeric(df_CAPE15_clean$evaluated_result) / as.numeric(df_CAPE15_clean$nQuestionsanswered) 
+                                           
+
+table(df_CAPE15_clean$weightedscore)
+
+```
+
+```{r}
+
+df_CAPE15_clean$PLE_Yes <- ifelse(df_CAPE15_clean$Experiment.Version > 24,
+                                             as.numeric(df_CAPE15_clean$evaluated_result) > as.numeric(df_CAPE15_clean$nQuestionsanswered),
+                                             as.numeric(df_CAPE15_clean$evaluated_result) < as.numeric(df_CAPE15_clean$nQuestionsanswered) * 2)
+
+table(df_CAPE15_clean$PLE_Yes)
+
+```
+
+
+
+```{r}
+
+df_CAPE15_clean$PLE_3m1to15_quantised <- apply(df_CAPE15_clean, 1, function(row) {
+  split_values <- strsplit(row["PLE_3m1to15"], "\\+")[[1]]
+
+
+  every_second_value <- split_values[c(FALSE, TRUE)]
+
+  return(paste(every_second_value, collapse = "+"))
+})
+
+print(df_CAPE15_clean$PLE_3m1to15_quantised)
+```
+
+```{r}
+
+df_CAPE15_clean$PLE_3m1to15_quantised <- apply(df_CAPE15_clean, 1, function(row) {
+  split_values <- strsplit(row["PLE_3m1to15"], "\\+")[[1]]
+
+
+  every_second_value <- split_values[c(FALSE, TRUE)]
+
+  
+  if (length(every_second_value) > 0) {
+    return(paste(every_second_value, collapse = "+"))
+  } else {
+    return(NULL)
+  }
+})
+
+
+df_CAPE15_clean <- df_CAPE15_clean[!sapply(df_CAPE15_clean$PLE_3m1to15_quantised, is.null), ]
+
+print(df_CAPE15_clean$PLE_3m1to15_quantised)
+```
+
+
+
+```{r}
+
+df_CAPE15_clean$PLE_ever1to15_quantised <- apply(df_CAPE15_clean, 1, function(row) {
+  split_values <- strsplit(row["PLE_ever1to15"], "\\+")[[1]]
+
+  
+  every_second_value <- split_values[c(FALSE, TRUE)]
+
+  return(paste(every_second_value, collapse = "+"))
+})
+
+
+print(df_CAPE15_clean$PLE_ever1to15_quantised)
+
+
+```
+
+```{r}
+df_CAPE15_clean$evaluated_PLE_ever1to15 <- sapply(df_CAPE15_clean$PLE_ever1to15_quantised, function(expression) {
+  eval(parse(text = expression))
+})
+print(df_CAPE15_clean$evaluated_PLE_ever1to15)
+
+
+
+```
+
+```{r}
+
+df_CAPE15_clean$evaluated_PLE_ever1to15 <- sapply(df_CAPE15_clean$PLE_ever1to15_quantised, function(expression) {
+
+  if (expression != "++++++") {
+    eval(parse(text = expression))
+  } else {
+    NULL  
+  }
+})
+
+
+df_CAPE15_clean <- df_CAPE15_clean[!sapply(df_CAPE15_clean$evaluated_PLE_ever1to15, is.null), ]
+
+print(df_CAPE15_clean$evaluated_PLE_ever1to15)
+
+```
+
+
+```{r}
+df_CAPE15_clean$evaluated_3m1to15 <- sapply(df_CAPE15_clean$PLE_3m1to15_quantised, function(expression) {
+  if (expression != "++++++") {
+    eval(parse(text = expression))
+  } else {
+    NULL  
+  }
+})
+
+print(df_CAPE15_clean$evaluated_3m1to15)
+```
+
+```{r}
+
+df_CAPE15_clean$nQuestionsanswered_PLE3m <- sapply(strsplit(df_CAPE15_clean$PLE_3m1to15_quantised, "\\+"), length)
+
+
+print(df_CAPE15_clean$nQuestionsanswered_PLE3m)
+```
+
+```{r}
+
+df_CAPE15_clean$nQuestionsanswered_PLEever <- sapply(strsplit(df_CAPE15_clean$PLE_ever1to15_quantised, "\\+"), length)
+
+
+print(df_CAPE15_clean$nQuestionsanswered_PLEever)
+```
+
+```{r}
+
+
+df_CAPE15_clean$weightedscore_3m <- df_CAPE15_clean$evaluated_3m1to15 / df_CAPE15_clean$nQuestionsanswered_PLE3m 
+                                           
+
+table(df_CAPE15_clean$weightedscore_3m)
+
+```
+
+```{r}
+
+df_CAPE15_clean$weightedscore_3m <- df_CAPE15_clean$evaluated_PLE_ever1to15 / df_CAPE15_clean$nQuestionsanswered_PLE3m 
+                                           
+
+table(df_CAPE15_clean$weightedscore_3m)
+
+```
+
+```{r}
+
+df_CAPE15_clean$threemonths_overcutoff_bukenaite_1.47 <- as.numeric(df_CAPE15_clean$weightedscore_3m) > 1.47
+
+table(df_CAPE15_clean$threemonths_overcutoff_bukenaite_1.47)                                      
+```
+
+```{r}
+
+df_CAPE15_clean$ever_overcutoff_bukenaite_1.47 <- as.numeric(df_CAPE15_clean$weightedscore_PLEever) > 1.47
+
+table(df_CAPE15_clean$ever_overcutoff_bukenaite_1.47)                                      
+```
+
+```{r}
+
+df_CAPE15_clean$weightedscore_PLEever <- df_CAPE15_clean$evaluated_PLE_ever1to15 / df_CAPE15_clean$nQuestionsanswered_PLEever
+                                           
+
+table(df_CAPE15_clean$weightedscore_PLEever)
+
+```
+
+```{r}
+
+
+df_CAPE15_clean$ever_overcutoff_bukenaite_1.47 <- as.numeric(df_CAPE15_clean$evaluated_PLE_ever1to15) > 1.47
+  table(df_CAPE15_clean$ever_overcutoff_bukenaite_1.47)                                         
+```
+```{r}
+df_CAPE15_clean_onlyvalidparticipants <-df_CAPE15_clean[df_CAPE15_clean$Participant.Private.ID %in% validIds,]
+```
+
+```{r}
+table(df_CAPE15_clean_onlyvalidparticipants$Spacetaskdone)
+table(df_CAPE15_clean_onlyvalidparticipants$Socialtaskdone)
+table(df_CAPE15_clean_onlyvalidparticipants$branch.huc2)
+table(df_CAPE15_clean_onlyvalidparticipants$branch.19ea)
+table(df_CAPE15_clean_onlyvalidparticipants$branch.b8n7)
+ table(df_CAPE15_clean_onlyvalidparticipants$ever_overcutoff_bukenaite_1.47) 
+ table(df_CAPE15_clean_onlyvalidparticipants$ever_overcutoff_bukenaite_1.47)      
+
+```
+
+
+```{r}
+write_csv(df_CAPE15_clean,"CAPE15_clean_17.1.2024.csv")
+```
