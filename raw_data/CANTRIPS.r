@@ -873,7 +873,7 @@ summary(model_use_past_year)
         Spacetask
 ###############################################################################
 
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~readinandcombinespacetask~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 #Space Task R1: vigd
@@ -919,6 +919,51 @@ View(Spacetask_allcombined)
 write.xlsx(Spacetask_allcombined, "Spacetask_allcombined.xlsx")
 write.csv(Spacetask_allcombined, "Spacetask_allcombined.csv", row.names = FALSE)
 
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~exclusioncriteria~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+ExclusionBasis<-Spacetask_allcombined %>%
+group_by(Participant.Private.ID) %>%
+summarise(  nomoveX=sum(distanceMovedX==0), 
+nomoveY=sum(distanceMovedY==0), 
+nomoveXY=sum(distanceMovedX==0 & distanceMovedY==0), 
+overtime=sum(timeToComplete>5000), 
+undertime=sum(timeToComplete<1000), 
+zerotime=sum(timeToComplete==0),
+excludeX= nomoveX>108, 
+excludeY=nomoveY>108, 
+excludeXY= nomoveXY >21, 
+ excludeOvertime= overtime >21, 
+excludeUndertime= undertime >21) 
+                    
+IndicesToExclude<-ExclusionBasis %>%
+select(starts_with("exclude")) %>%
+rowSums()>0
+IdsToExclude<-ExclusionBasis$Participant.Private.ID[IndicesToExclude]          #extract indices of participants to exclude
+                #IndicesToExclude<-ExclusionBasis %>%
+                               # select(starts_with("exclude")) %>%
+                                #rowSums()>0
+               # IdsToExclude<-ExclusionBasis$Participant.Private.ID[IndicesToExclude]
+
+
+
+print(ExclusionBasis$excludeX)
+table(ExclusionBasis$excludeX)
+
+
+IndicesToExclude<-ExclusionBasis %>%
+select(starts_with("exclude")) %>%
+rowSums()>0
+IdsToExclude<-ExclusionBasis$Participant.Private.ID[IndicesToExclude]
+print(IdsToExclude)
+
+
+
+
+
 ################################################################################
              Socialtask
 ################################################################################
@@ -957,3 +1002,5 @@ print(names(Socialtask_allcombined))
 
 write.xlsx(df_all_Questionnaires_combined, "Socialtask_allcombined")
 write.csv(df_all_Questionnaires_combined, "Socialtask_allcombined.csv", row.names = FALSE)
+
+
